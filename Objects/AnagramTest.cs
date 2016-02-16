@@ -34,7 +34,7 @@ namespace AnagramTest
 
       Anagram newAnagram = new Anagram(input1,input2);
 
-      Assert.Equal(input1, newAnagram.CompareInputs());
+      Assert.Equal(input2, newAnagram.CompareInputs());
     }
   }
 }
