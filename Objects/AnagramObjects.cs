@@ -5,16 +5,16 @@ namespace Anagrams
   {
       private string _userInput1;
       private string _userInput2;
+      private char[] _inputInfo;
+      private char[]  _inputInfo2;
 //constructor//
 
     public Anagram(string UserInput1, string UserInput2)
      {
-       char[] _inputInfo = _userInput1.ToCharArray();
-       char[]  _inputInfo2 = _userInput2.ToCharArray();
        _userInput1 = UserInput1;
        _userInput2 = UserInput2;
-       _inputInfo.Add(this);
-       _inputInfo2.Add(this);
+       char[] _inputInfo = UserInput1.ToCharArray();
+       char[]  _inputInfo2 = UserInput2.ToCharArray();
      }
 
 //getters and setters for properties//
@@ -28,9 +28,9 @@ namespace Anagrams
       return _userInput2;
       }
 
-      public bool CompareInputs(string _userInput1, string _userInput2)
+      public bool CompareInputs(string UserInput1, string UserInput2)
       {
-        if (_userInput1 == _userInput2)
+        if (UserInput1 == UserInput2)
         {
           return true;
         }
