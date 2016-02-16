@@ -11,25 +11,30 @@ namespace AnagramTest
     [Fact]
     public void IsWord_forWordEqualingSameWord_true()
     {
-      //arrange//
       string input1 = "beard";
       string input2 = "beard";
       Anagram newAnagram = new Anagram(input1, input2);
-      //act//
-      bool result = newAnagram.CompareInputs(input1, input2);
-      //assert//
-      Assert.Equal(true, result);
+      Assert.Equal(true, newAnagram.CompareInputs());
     }
+
     [Fact]
     public void IsWord_forWordNotEqualingSameWord_false()
     {
       string input1 = "frog";
       string input2 = "superman";
       Anagram newAnagram = new Anagram(input1,input2);
+      Assert.Equal(false, newAnagram.CompareInputs());
+    }
 
-      bool result = newAnagram.CompareInputs(input1, input2);
+    [Fact]
+    public void IsWord_ForWordIsAnagramOfSameWord_true()
+    {
+      string input1 = "and";
+      string input2 = "dna";
 
-      Assert.Equal(false, result);
+      Anagram newAnagram = new Anagram(input1,input2);
+
+      Assert.Equal(true, newAnagram.CompareInputs());
     }
   }
 }
