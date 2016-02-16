@@ -17,16 +17,7 @@ namespace Anagrams
 
 // getters and setters for properties//
 
-      public string GetUserInput1()
-      {
-      return _userInput1;
-      }
-      public string GetUserInput2()
-      {
-      return _userInput2;
-      }
-
-    public bool CompareInputs()
+    public string CompareInputs()
     {
       char[] _inputInfo = _userInput1.ToCharArray();
       char[]  _inputInfo2 = _userInput2.ToCharArray();
@@ -35,15 +26,15 @@ namespace Anagrams
 
       if (_inputInfo == _inputInfo2)
       {
-        return true;
+        return _userInput2;
       }
       else if (_inputInfo.SequenceEqual(_inputInfo2))
       {
-        return true;
+        return _userInput2;
       }
       else
       {
-        return false;
+        return _userInput1;
       }
     }
   }
