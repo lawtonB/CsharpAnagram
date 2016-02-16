@@ -1,13 +1,32 @@
 using Xunit;
-namespace  Anagram.Objects
+using Anagrams;
+using System;
+using System.Collections.Generic;
+
+
+namespace AnagramTest
 {
-  public class AnagramTest
+  public class AnagramTester
   {
     [Fact]
-    public void IsTemplateTest_ForCondition_true()
+    public void IsWord_forWordEqualingSameWord_true()
     {
-      //code goes here//
+      //arrange//
+      string input1 = "beard";
+      string input2 = "beard";
+      Anagram newAnagram = new Anagram(input1, input2);
+      // List<Anagram> newListAnagram = new List<Anagram>() {newAnagram};
+      //act//
+      bool result = newAnagram.CompareInputs(input1, input2);
+      //assert//
+      Assert.Equal(true, result);
     }
-
   }
 }
+
+
+// if beard = beard
+// else if bread = beard
+// else  hat = beard
+
+// Array.Sort, Array.CharAt(),
