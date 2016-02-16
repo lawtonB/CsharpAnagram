@@ -1,7 +1,7 @@
 using Xunit;
-namespace  TEMPLATES.Objects
+namespace  Anagram.Objects
 {
-  public class TemplateTest
+  public class AnagramTest
   {
     [Fact]
     public void IsTemplateTest_ForCondition_true()

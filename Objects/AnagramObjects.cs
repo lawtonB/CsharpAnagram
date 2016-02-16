@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 
-namespace TEMPLATES.Objects
+namespace Anagram.Objects
 
 {
 
   //variables//
 
-    public class TEMPLATE
+    public class Anagram
   {
       private string _TEMPLATEVARIABLE;
       private static List<TEMPLATE> _TEMPLATELIST = new List<TEMPLATE> {};

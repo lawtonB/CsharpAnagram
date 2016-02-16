@@ -1,8 +1,8 @@
 using Nancy;
-using TEMPLATE.Objects;
+using Anagram.Objects;
 using System.Collections.Generic;
 
-namespace Project
+namespace AnagramFront
 {
   public class HomeModule : NancyModule
   {
