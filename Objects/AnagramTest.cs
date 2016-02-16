@@ -15,11 +15,21 @@ namespace AnagramTest
       string input1 = "beard";
       string input2 = "beard";
       Anagram newAnagram = new Anagram(input1, input2);
-      // List<Anagram> newListAnagram = new List<Anagram>() {newAnagram};
       //act//
       bool result = newAnagram.CompareInputs(input1, input2);
       //assert//
       Assert.Equal(true, result);
+    }
+    [Fact]
+    public void IsWord_forWordNotEqualingSameWord_false()
+    {
+      string input1 = "frog";
+      string input2 = "superman";
+      Anagram newAnagram = new Anagram(input1,input2);
+
+      bool result = newAnagram.CompareInputs(input1, input2);
+
+      Assert.Equal(false, result);
     }
   }
 }
